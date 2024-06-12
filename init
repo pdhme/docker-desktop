@@ -1,12 +1,12 @@
 #!/bin/bash
 
 sighandl() {
-	trap "echo Received $1. Exiting...; vncserver -kill :1; exit;" $1
+	trap "echo Received $1. Exiting...; vncserver -kill :0; exit;" $1
 }
 
 for sig in SIGINT SIGTERM; do sighandl $sig; done
 
-vncserver
-/usr/share/novnc/utils/novnc_proxy --vnc localhost:5901 --listen 80 &
+vncserver :0
+/usr/share/novnc/utils/novnc_proxy --vnc localhost:5900 --listen 80 &
 
 while :; do :; done
