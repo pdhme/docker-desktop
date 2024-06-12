@@ -6,8 +6,10 @@ RUN apt-get install -y onboard curl
 RUN ln -sf /usr/share/novnc/vnc.html /usr/share/novnc/index.html
 
 RUN curl "https://archive.seamonkey-project.org/releases/2.53.18.2/linux-x86_64/en-GB/seamonkey-2.53.18.2.en-GB.linux-x86_64.tar.bz2" | tar -jxf -
+COPY user /root/.config/dconf/user
 
 EXPOSE 80
+EXPOSE 8080
 WORKDIR /root
 RUN mkdir .vnc
 COPY xs .vnc/xstartup
