@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ -f ~/.vnc/passwd ]
+then
+	x11vnc -usepw &
+else
+	x11vnc &
+fi
+/usr/share/novnc/utils/novnc_proxy --vnc localhost:5900 --listen 80 &
+xfce4-session

@@ -6,6 +6,9 @@ sighandl() {
 
 for sig in SIGINT SIGTERM; do sighandl $sig; done
 
+#/usr/bin/x11vnc -forever -usepw -create &
+#Xvfb :0 -screen 0 2560x1440x24 &
+#/usr/bin/x11vnc -display :0 -forever -usepw &
 vncserver :0
 /usr/share/novnc/utils/novnc_proxy --vnc localhost:5900 --listen 80 &
 
