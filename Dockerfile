@@ -1,4 +1,5 @@
-FROM adelielinux/adelie
+#FROM adelielinux/adelie
+FROM alpine
 
 RUN apk update
 RUN apk add x11vnc xvfb dbus-x11 git
