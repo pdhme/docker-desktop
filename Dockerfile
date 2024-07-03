@@ -10,8 +10,8 @@ RUN apk add tar
 RUN git clone https://github.com/novnc/noVNC.git /usr/share/novnc
 RUN ln -sf /usr/share/novnc/vnc.html /usr/share/novnc/index.html
 
-RUN curl "https://archive.seamonkey-project.org/releases/2.53.18.2/linux-x86_64/en-GB/seamonkey-2.53.18.2.en-GB.linux-x86_64.tar.bz2" | tar -jxf -
-RUN curl "https://netcologne.dl.sourceforge.net/project/florence/florence/0.6.3/florence-0.6.3.tar.bz2" | tar -jxf -
+#RUN curl "https://archive.seamonkey-project.org/releases/2.53.18.2/linux-x86_64/en-GB/seamonkey-2.53.18.2.en-GB.linux-x86_64.tar.bz2" | tar -jxf -
+#RUN curl "https://netcologne.dl.sourceforge.net/project/florence/florence/0.6.3/florence-0.6.3.tar.bz2" | tar -jxf -
 
 RUN apk add bash vim neofetch
 RUN usermod -s /bin/bash root
