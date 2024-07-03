@@ -14,7 +14,7 @@ RUN ln -sf /usr/share/novnc/vnc.html /usr/share/novnc/index.html
 #RUN curl "https://netcologne.dl.sourceforge.net/project/florence/florence/0.6.3/florence-0.6.3.tar.bz2" | tar -jxf -
 
 RUN apk add bash vim neofetch
-RUN usermod -s /bin/bash root
+#RUN usermod -s /bin/bash root
 
 EXPOSE 80
 WORKDIR /root
